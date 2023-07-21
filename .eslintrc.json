@@ -1,3 +1,31 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": [
+		// "plugin:storybook/recommended",
+		"next",
+		"next/core-web-vitals",
+		"eslint:recommended",
+		"prettier"
+	],
+	"globals": {
+		"React": "readonly"
+	},
+	"plugins": ["prettier", "import"],
+	"rules": {
+		"no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+		"import/no-unresolved": "error",
+		"react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+		"import/order": [
+			2,
+			{
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		],
+		"import/newline-after-import": 1,
+		"prettier/prettier": ["error"]
+	}
 }

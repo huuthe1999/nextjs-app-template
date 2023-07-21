@@ -1,0 +1,7 @@
+.yarn
+.next
+dist
+dist-ssr
+*.local
+node_modules
+coverage
